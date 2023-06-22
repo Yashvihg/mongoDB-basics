@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    
+
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Served from Express !</h1>
+    </header>
+    <main class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 border border-2">
+          <h2>Add New Product</h2>
+          <form class="row m-2" onsubmit="AddNewProduct(event)">
+            <div class="col-md-4">
+              <label>Product Id :</label>
+            </div>
+            <div class="col-md-8">
+              <input type="text" id="txtProductId" />
+            </div>
+            <div class="col-md-4">
+              <label>Product Title :</label>
+            </div>
+            <div class="col-md-8">
+              <input type="text" id="txtProductTitle" />
+            </div>
+            <div class="col-md-4">
+              <label>Price :</label>
+            </div>
+            <div class="col-md-8">
+              <input type="text" id="txtProductPrice" />
+            </div>
+            <div class="col-md-4">
+              <label>Rating :</label>
+            </div>
+            <div class="col-md-8">
+              <input type="text" id="txtProductRating" />
+            </div>
+            <div class="col-md-4">
+              <label>Image URL: </label>
+            </div>
+            <div class="col-md-8">
+              <input type="text" id="txtProductUrl" />
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-8 m-2">
+                <button class="btn btn-success">Add New Product</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row m-2 g-2" id="productList"></div>
+
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Message</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+              <button type="button" class="btn btn-primary">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
